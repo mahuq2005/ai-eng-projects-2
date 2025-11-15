@@ -173,6 +173,25 @@ If the ID is not in id2char, we can return a placeholder (like [UNK]) but in our
 
 Test the tokenizer.
 
+
+
+========================
+sub-word (BPE) organizer
+========================
+
+We are going to use the Hugging Face transformers library to load a pre-trained GPT-2 tokenizer, which uses Byte-Pair Encoding (BPE).
+Steps:
+
+Import AutoTokenizer and load the GPT-2 tokenizer.
+
+Define encode and decode functions that use the tokenizer.
+
+Test the tokenizer on a sample string and inspect the tokens.
+
+Note: The tokenizer will break words into subwords when necessary, and it can handle emojis and other characters.
+
+Let's code accordingly.
+
 Note: The problem says "for simplicity, assume we are only using uppercase and lowercase English letters (a-z, A-Z)" but we are also going to handle non-alphabet by [UNK].
 
 Let's code accordingly.
