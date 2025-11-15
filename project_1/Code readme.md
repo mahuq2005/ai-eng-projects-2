@@ -1,4 +1,11 @@
+=============================================================
+WORD TOKENIZER
+=============================================================
+
+
+
 We are going to complete the code for word-level tokenization.
+
 Steps:
 
 Build vocabulary from the corpus.
