@@ -135,3 +135,45 @@ We have to decide if we want to be case-sensitive. The example corpus has both "
 We'll keep it case-sensitive for now.
 
 Let's code accordingly.
+
+
+
+=============================================
+Charecter Tokenizer
+=============================================
+
+We are going to build a character-level tokenizer. We'll include:
+
+All uppercase and lowercase English letters (so 26*2 = 52 letters)
+
+We'll also add two special tokens: one for unknown (if we encounter any non-alphabet character) and one for padding.
+
+Steps:
+
+Create the vocabulary (vocab) which will include:
+[UNK] for unknown characters (non-alphabet)
+[PAD] for padding
+Then all the uppercase and lowercase letters.
+
+Create mappings: char2id and id2char.
+
+Implement encode function:
+
+We'll convert each character in the text to its ID.
+
+If the character is in the vocabulary (i.e., it's a letter), use its ID.
+
+Otherwise, use the [UNK] token.
+
+Implement decode function:
+
+Convert each ID in the list to the corresponding character.
+
+If the ID is not in id2char, we can return a placeholder (like [UNK]) but in our case we have included all 52 letters and two specials, so we should be safe for the given assumption (only uppercase and lowercase letters). However, we might have non-alphabet in the input, so we used [UNK] in encoding, so we must have [UNK] in the decoding as well.
+
+Test the tokenizer.
+
+Note: The problem says "for simplicity, assume we are only using uppercase and lowercase English letters (a-z, A-Z)" but we are also going to handle non-alphabet by [UNK].
+
+Let's code accordingly.
+
