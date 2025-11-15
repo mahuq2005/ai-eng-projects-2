@@ -175,9 +175,9 @@ Test the tokenizer.
 
 
 
-========================
-sub-word (BPE) organizer
-========================
+=============================
+sub-word (BPE) Tokenizer
+==============================
 
 We are going to use the Hugging Face transformers library to load a pre-trained GPT-2 tokenizer, which uses Byte-Pair Encoding (BPE).
 Steps:
